@@ -15,6 +15,11 @@
 		D12DB8C62613F44C0023C371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8C42613F44C0023C371 /* LaunchScreen.storyboard */; };
 		D12DB8D12613F44C0023C371 /* TheBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8D02613F44C0023C371 /* TheBooksTests.swift */; };
 		D12DB8DC2613F44C0023C371 /* TheBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8DB2613F44C0023C371 /* TheBooksUITests.swift */; };
+		D12DB8EB26140E3F0023C371 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EA26140E3F0023C371 /* login.png */; };
+		D12DB8ED26140E700023C371 /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EC26140E700023C371 /* register.png */; };
+		D12DB8F126140EC20023C371 /* book-add.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EE26140EC10023C371 /* book-add.png */; };
+		D12DB8F226140EC20023C371 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EF26140EC10023C371 /* home.png */; };
+		D12DB8F326140EC20023C371 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8F026140EC20023C371 /* edit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		D12DB8D72613F44C0023C371 /* TheBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12DB8DB2613F44C0023C371 /* TheBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBooksUITests.swift; sourceTree = "<group>"; };
 		D12DB8DD2613F44C0023C371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D12DB8EA26140E3F0023C371 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		D12DB8EC26140E700023C371 /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
+		D12DB8EE26140EC10023C371 /* book-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-add.png"; sourceTree = "<group>"; };
+		D12DB8EF26140EC10023C371 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		D12DB8F026140EC20023C371 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +109,7 @@
 		D12DB8B82613F44B0023C371 /* TheBooks */ = {
 			isa = PBXGroup;
 			children = (
-				D12DB8E92613FAF80023C371 /* assets */,
+				D12DB8E92613FAF80023C371 /* layout */,
 				D12DB8B92613F44B0023C371 /* AppDelegate.swift */,
 				D12DB8BB2613F44B0023C371 /* SceneDelegate.swift */,
 				D12DB8BD2613F44B0023C371 /* ViewController.swift */,
@@ -129,11 +139,16 @@
 			path = TheBooksUITests;
 			sourceTree = "<group>";
 		};
-		D12DB8E92613FAF80023C371 /* assets */ = {
+		D12DB8E92613FAF80023C371 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				D12DB8EE26140EC10023C371 /* book-add.png */,
+				D12DB8F026140EC20023C371 /* edit.png */,
+				D12DB8EF26140EC10023C371 /* home.png */,
+				D12DB8EC26140E700023C371 /* register.png */,
+				D12DB8EA26140E3F0023C371 /* login.png */,
 			);
-			path = assets;
+			path = layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +256,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12DB8C62613F44C0023C371 /* LaunchScreen.storyboard in Resources */,
+				D12DB8F326140EC20023C371 /* edit.png in Resources */,
+				D12DB8EB26140E3F0023C371 /* login.png in Resources */,
+				D12DB8F226140EC20023C371 /* home.png in Resources */,
+				D12DB8ED26140E700023C371 /* register.png in Resources */,
 				D12DB8C32613F44C0023C371 /* Assets.xcassets in Resources */,
+				D12DB8F126140EC20023C371 /* book-add.png in Resources */,
 				D12DB8C12613F44B0023C371 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
