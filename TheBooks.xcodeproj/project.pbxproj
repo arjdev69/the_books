@@ -99,6 +99,7 @@
 		D12DB8B82613F44B0023C371 /* TheBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D12DB8E92613FAF80023C371 /* assets */,
 				D12DB8B92613F44B0023C371 /* AppDelegate.swift */,
 				D12DB8BB2613F44B0023C371 /* SceneDelegate.swift */,
 				D12DB8BD2613F44B0023C371 /* ViewController.swift */,
@@ -126,6 +127,13 @@
 				D12DB8DD2613F44C0023C371 /* Info.plist */,
 			);
 			path = TheBooksUITests;
+			sourceTree = "<group>";
+		};
+		D12DB8E92613FAF80023C371 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
