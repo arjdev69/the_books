@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D10A0DDB2614C27200FB2D61 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A0DDA2614C27200FB2D61 /* Utils.swift */; };
 		D12DB8BA2613F44B0023C371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8B92613F44B0023C371 /* AppDelegate.swift */; };
 		D12DB8BC2613F44B0023C371 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8BB2613F44B0023C371 /* SceneDelegate.swift */; };
-		D12DB8BE2613F44B0023C371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8BD2613F44B0023C371 /* ViewController.swift */; };
+		D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8BD2613F44B0023C371 /* LoginViewController.swift */; };
 		D12DB8C12613F44B0023C371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8BF2613F44B0023C371 /* Main.storyboard */; };
 		D12DB8C32613F44C0023C371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8C22613F44C0023C371 /* Assets.xcassets */; };
 		D12DB8C62613F44C0023C371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8C42613F44C0023C371 /* LaunchScreen.storyboard */; };
@@ -19,7 +20,7 @@
 		D12DB8ED26140E700023C371 /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EC26140E700023C371 /* register.png */; };
 		D12DB8F126140EC20023C371 /* book-add.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EE26140EC10023C371 /* book-add.png */; };
 		D12DB8F226140EC20023C371 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EF26140EC10023C371 /* home.png */; };
-		D12DB8F326140EC20023C371 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8F026140EC20023C371 /* edit.png */; };
+		D12DB8F326140EC20023C371 /* book-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8F026140EC20023C371 /* book-edit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D10A0DDA2614C27200FB2D61 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D12DB8B62613F44B0023C371 /* TheBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12DB8B92613F44B0023C371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D12DB8BB2613F44B0023C371 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D12DB8BD2613F44B0023C371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D12DB8BD2613F44B0023C371 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D12DB8C02613F44B0023C371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D12DB8C22613F44C0023C371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D12DB8C52613F44C0023C371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		D12DB8EC26140E700023C371 /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
 		D12DB8EE26140EC10023C371 /* book-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-add.png"; sourceTree = "<group>"; };
 		D12DB8EF26140EC10023C371 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		D12DB8F026140EC20023C371 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		D12DB8F026140EC20023C371 /* book-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-edit.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,157 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D10A0DC62614B78500FB2D61 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				D10A0DD82614BA8F00FB2D61 /* Model */,
+				D10A0DD72614BA8900FB2D61 /* View */,
+				D10A0DD62614BA8300FB2D61 /* Controller */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		D10A0DC72614B7B500FB2D61 /* book */ = {
+			isa = PBXGroup;
+			children = (
+				D10A0DCC2614B83400FB2D61 /* Model */,
+				D10A0DCB2614B81D00FB2D61 /* home */,
+				D10A0DC92614B80400FB2D61 /* add */,
+				D10A0DCA2614B80F00FB2D61 /* edit */,
+			);
+			path = book;
+			sourceTree = "<group>";
+		};
+		D10A0DC92614B80400FB2D61 /* add */ = {
+			isa = PBXGroup;
+			children = (
+				D10A0DD02614BA2300FB2D61 /* Model */,
+				D10A0DD12614BA2B00FB2D61 /* View */,
+				D10A0DD22614BA3000FB2D61 /* Controller */,
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
+		D10A0DCA2614B80F00FB2D61 /* edit */ = {
+			isa = PBXGroup;
+			children = (
+				D10A0DD52614BA5800FB2D61 /* Model */,
+				D10A0DD42614BA5300FB2D61 /* View */,
+				D10A0DD32614BA4D00FB2D61 /* Controller */,
+			);
+			path = edit;
+			sourceTree = "<group>";
+		};
+		D10A0DCB2614B81D00FB2D61 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				D10A0DCD2614B9EA00FB2D61 /* Model */,
+				D10A0DCE2614B9EF00FB2D61 /* View */,
+				D10A0DCF2614B9F500FB2D61 /* Controller */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		D10A0DCC2614B83400FB2D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D10A0DCD2614B9EA00FB2D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D10A0DCE2614B9EF00FB2D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D10A0DCF2614B9F500FB2D61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D10A0DD02614BA2300FB2D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D10A0DD12614BA2B00FB2D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D10A0DD22614BA3000FB2D61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D10A0DD32614BA4D00FB2D61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D10A0DD42614BA5300FB2D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D10A0DD52614BA5800FB2D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D10A0DD62614BA8300FB2D61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D12DB8BD2613F44B0023C371 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D10A0DD72614BA8900FB2D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D10A0DD82614BA8F00FB2D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D10A0DD92614C23600FB2D61 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D10A0DDA2614C27200FB2D61 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D12DB8AD2613F44B0023C371 = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +262,12 @@
 		D12DB8B82613F44B0023C371 /* TheBooks */ = {
 			isa = PBXGroup;
 			children = (
-				D12DB8E92613FAF80023C371 /* layout */,
+				D12DB8E92613FAF80023C371 /* _layout */,
+				D10A0DC72614B7B500FB2D61 /* book */,
+				D10A0DC62614B78500FB2D61 /* login */,
+				D10A0DD92614C23600FB2D61 /* Utils */,
 				D12DB8B92613F44B0023C371 /* AppDelegate.swift */,
 				D12DB8BB2613F44B0023C371 /* SceneDelegate.swift */,
-				D12DB8BD2613F44B0023C371 /* ViewController.swift */,
 				D12DB8BF2613F44B0023C371 /* Main.storyboard */,
 				D12DB8C22613F44C0023C371 /* Assets.xcassets */,
 				D12DB8C42613F44C0023C371 /* LaunchScreen.storyboard */,
@@ -139,16 +294,16 @@
 			path = TheBooksUITests;
 			sourceTree = "<group>";
 		};
-		D12DB8E92613FAF80023C371 /* layout */ = {
+		D12DB8E92613FAF80023C371 /* _layout */ = {
 			isa = PBXGroup;
 			children = (
 				D12DB8EE26140EC10023C371 /* book-add.png */,
-				D12DB8F026140EC20023C371 /* edit.png */,
+				D12DB8F026140EC20023C371 /* book-edit.png */,
 				D12DB8EF26140EC10023C371 /* home.png */,
 				D12DB8EC26140E700023C371 /* register.png */,
 				D12DB8EA26140E3F0023C371 /* login.png */,
 			);
-			path = layout;
+			path = _layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12DB8C62613F44C0023C371 /* LaunchScreen.storyboard in Resources */,
-				D12DB8F326140EC20023C371 /* edit.png in Resources */,
+				D12DB8F326140EC20023C371 /* book-edit.png in Resources */,
 				D12DB8EB26140E3F0023C371 /* login.png in Resources */,
 				D12DB8F226140EC20023C371 /* home.png in Resources */,
 				D12DB8ED26140E700023C371 /* register.png in Resources */,
@@ -287,7 +442,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D12DB8BE2613F44B0023C371 /* ViewController.swift in Sources */,
+				D10A0DDB2614C27200FB2D61 /* Utils.swift in Sources */,
+				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,
 				D12DB8BA2613F44B0023C371 /* AppDelegate.swift in Sources */,
 				D12DB8BC2613F44B0023C371 /* SceneDelegate.swift in Sources */,
 			);
