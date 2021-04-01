@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D10A0DDB2614C27200FB2D61 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A0DDA2614C27200FB2D61 /* Utils.swift */; };
 		D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */; };
+		D12832E5261563FB00BA8CE5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */; };
 		D12DB8BA2613F44B0023C371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8B92613F44B0023C371 /* AppDelegate.swift */; };
 		D12DB8BC2613F44B0023C371 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8BB2613F44B0023C371 /* SceneDelegate.swift */; };
 		D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12DB8BD2613F44B0023C371 /* LoginViewController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		D10A0DDA2614C27200FB2D61 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D12DB8B62613F44B0023C371 /* TheBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12DB8B92613F44B0023C371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D12DB8BB2613F44B0023C371 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				D12DB8BD2613F44B0023C371 /* LoginViewController.swift */,
 				D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */,
+				D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				D10A0DDB2614C27200FB2D61 /* Utils.swift in Sources */,
 				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,
 				D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */,
+				D12832E5261563FB00BA8CE5 /* RegisterViewController.swift in Sources */,
 				D12DB8BA2613F44B0023C371 /* AppDelegate.swift in Sources */,
 				D12DB8BC2613F44B0023C371 /* SceneDelegate.swift in Sources */,
 			);
