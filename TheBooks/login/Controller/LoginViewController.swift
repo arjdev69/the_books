@@ -57,7 +57,6 @@ class LoginViewController: UIViewController {
     
     
     //MARK: Actions
-    
     @IBAction func ForgetPassword(_ sender: Any) {
     
     }
