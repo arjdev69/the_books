@@ -13,10 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var Header: UIView!
     @IBOutlet weak var Email: UIView!
     @IBOutlet weak var Password: UIView!
-    
-    @IBOutlet weak var Scroll: UIScrollView!
     @IBOutlet weak var TextFieldEmail: UITextField!
     @IBOutlet weak var TextFieldPassword: UITextField!
+    @IBOutlet weak var Scroll: UIScrollView!
+    
+
     @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
@@ -55,6 +56,19 @@ class LoginViewController: UIViewController {
         self.Scroll.contentSize = CGSize(width: self.Scroll.frame.width, height: self.Scroll.frame.height - 280)
     }
     
+    // MARK: - support funcs
+    func mountJsonServer() -> Dictionary<String, Any> {
+        guard let email = TextFieldEmail.text else { return [:] }
+        guard let password = TextFieldPassword.text else { return [:] }
+        
+        let dic:Dictionary<String, Any> = [
+            "email" : email,
+            "password_hash": password,
+        ]
+        
+        return dic
+    }
+    
     
     //MARK: Actions
     @IBAction func ForgetPassword(_ sender: Any) {
@@ -63,7 +77,13 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func Login(_ sender: Any) {
-        
+        let json = mountJsonServer()
+        UserRepository().addUserService(json) { (add, data) in
+            guard let dataServer = data as? Login.Users else {return}
+            if dataServer.email.isEmpty || dataServer.password_hash.isEmpty {
+                AlertControl(controller: self).basic(titulo: "Erro no formulário", mensagem: "Campos não pôdem ficarem vazios.", label: "Fechar", action: .destructive, type: .alert)
+            }
+        }
     }
     
     @IBAction func Register(_ sender: Any) {

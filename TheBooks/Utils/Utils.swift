@@ -8,9 +8,11 @@
 
 import UIKit
 
-class Utils: NSObject {
+public class Utils: NSObject {
     
+    public override init() {}
     
+    // MARK: - LAYOUT
     func roundCorners(with CACornerMask: CACornerMask, radius: CGFloat, view: UIView) {
         view.layer.cornerRadius = radius
         view.layer.maskedCorners = [CACornerMask]
@@ -24,4 +26,11 @@ class Utils: NSObject {
         view.layer.masksToBounds = true
     }
     
+    func generateJsonString(data: Data) -> String {
+        let jsonObject = SetupService().generateJsonObject(object: data)
+        let jsonData = SetupService().generateJsonData(object: jsonObject)
+        let jsonString = SetupService().generateJsonString(data: jsonData)
+        
+        return jsonString
+    }
 }

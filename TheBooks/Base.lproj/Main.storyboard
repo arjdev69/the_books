@@ -224,8 +224,8 @@
                         <outlet property="Header" destination="afM-84-Dem" id="AF1-wa-YKa"/>
                         <outlet property="Password" destination="bk2-Bk-Dnw" id="CiY-73-u0q"/>
                         <outlet property="Scroll" destination="Uqt-ew-2Jh" id="DgI-s2-iti"/>
-                        <outlet property="TextFieldEmail" destination="g4f-ar-ZzK" id="qFu-Ea-s0v"/>
-                        <outlet property="TextFieldPassword" destination="1IL-Ey-8yF" id="wGW-yD-A39"/>
+                        <outlet property="TextFieldEmail" destination="g4f-ar-ZzK" id="OMV-ve-tFv"/>
+                        <outlet property="TextFieldPassword" destination="1IL-Ey-8yF" id="Ue4-Kf-YpN"/>
                         <outlet property="btnLogin" destination="nzR-zX-wvT" id="rEQ-is-ZVB"/>
                     </connections>
                 </viewController>
