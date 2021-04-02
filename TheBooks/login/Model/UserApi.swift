@@ -23,7 +23,7 @@ class UserApi: NSObject {
     
     //MARK: - POST
     func addUserService(_ params:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void) {
-        guard let url = URL(string: urlService + "user") else {return}
+        guard let url = URL(string: urlService + "security/authenticate") else {return}
         
         AF.request(url, method: .post, parameters: params,encoding: JSONEncoding.default).responseJSON {
             AFdata in

@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var Header: UIView!
@@ -17,7 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var TextFieldPassword: UITextField!
     @IBOutlet weak var Scroll: UIScrollView!
     
-
+    
     @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
@@ -72,21 +74,25 @@ class LoginViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func ForgetPassword(_ sender: Any) {
-    
+        
     }
     
     
     @IBAction func Login(_ sender: Any) {
         let json = mountJsonServer()
         UserRepository().addUserService(json) { (add, data) in
-            guard let dataServer = data as? Login.Users else {return}
+            guard let dataServer = data as? Login.Users else {
+                AlertControl(controller: self).basic(titulo: "Erro no login", mensagem: "Erro ao efetuar login", label: "Fechar", action: .destructive, type: .alert)
+                return
+            }
+            
             if dataServer.email.isEmpty || dataServer.password_hash.isEmpty {
                 AlertControl(controller: self).basic(titulo: "Erro no formulário", mensagem: "Campos não pôdem ficarem vazios.", label: "Fechar", action: .destructive, type: .alert)
+                return
             }
+            let HomeBook = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeBook") as? HomeBookViewController
+            self.navigationController?.pushViewController(HomeBook ?? self, animated: true)
         }
-    }
-    
-    @IBAction func Register(_ sender: Any) {
     }
 }
 

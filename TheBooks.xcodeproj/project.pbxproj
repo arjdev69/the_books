@@ -11,6 +11,7 @@
 		6B609570EFBF76F937A95980 /* Pods_TheBooks_TheBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE8C7D9D5543BFD972A1AE5 /* Pods_TheBooks_TheBooksUITests.framework */; };
 		710A0E62AA9F03246ED92B52 /* Pods_TheBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E9C4C003E2488A6C22D6A /* Pods_TheBooks.framework */; };
 		D10A0DDB2614C27200FB2D61 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A0DDA2614C27200FB2D61 /* Utils.swift */; };
+		D120D16E26169DBD00CF01CE /* HomeBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120D16D26169DBD00CF01CE /* HomeBookViewController.swift */; };
 		D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */; };
 		D12832E5261563FB00BA8CE5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */; };
 		D12A1DE02616477700D6969C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A1DDF2616477700D6969C /* Api.swift */; };
@@ -59,6 +60,7 @@
 		8B9E9C4C003E2488A6C22D6A /* Pods_TheBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71094B1ED14EE801F111000 /* Pods-TheBooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBooksTests.release.xcconfig"; path = "Target Support Files/Pods-TheBooksTests/Pods-TheBooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		D10A0DDA2614C27200FB2D61 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D120D16D26169DBD00CF01CE /* HomeBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookViewController.swift; sourceTree = "<group>"; };
 		D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D12A1DDF2616477700D6969C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		D10A0DCF2614B9F500FB2D61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D120D16D26169DBD00CF01CE /* HomeBookViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 			files = (
 				D10A0DDB2614C27200FB2D61 /* Utils.swift in Sources */,
 				D12A1DE426164BFD00D6969C /* UserApi.swift in Sources */,
+				D120D16E26169DBD00CF01CE /* HomeBookViewController.swift in Sources */,
 				D12A1DE626164F1B00D6969C /* UserRepository.swift in Sources */,
 				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,
 				D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */,

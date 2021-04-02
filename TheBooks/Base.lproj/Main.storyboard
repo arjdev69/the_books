@@ -13,7 +13,7 @@
                 <navigationController navigationBarHidden="YES" id="qcQ-QX-n7j" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nQF-0K-eX9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="nQF-0K-eX9">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -23,6 +23,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wus-hS-fc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1447" y="-28"/>
+        </scene>
+        <!--Home Book View Controller-->
+        <scene sceneID="m5E-3X-3No">
+            <objects>
+                <viewController storyboardIdentifier="HomeBook" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DhX-rW-6sC" customClass="HomeBookViewController" customModule="TheBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p8H-Dn-CEu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pMc-Bk-gu1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXM-75-d3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="-958"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -184,7 +199,6 @@
                                                             <color key="titleColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.23529411759999999" alpha="0.95349957190000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="Register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwF-iA-Jy0"/>
                                                             <segue destination="qzp-mf-lcq" kind="show" id="sMF-ab-OHP"/>
                                                         </connections>
                                                     </button>
