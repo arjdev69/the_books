@@ -9,22 +9,26 @@
 import UIKit
 
 class HomeBookViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var Header: UIView!
+    @IBOutlet weak var SearchBarView: UIView!
+    
+    @IBOutlet weak var SearchField: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: FUNC-SETUP
+    func setupLayout(){
+        self.SearchBarView.layer.cornerRadius = 15
+        self.SearchField.setImage(UIImage(named: "searchImg"), for: .search, state: .normal)
     }
-    */
-
+    
+    
+    @IBAction func btnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
