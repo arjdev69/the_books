@@ -34,14 +34,8 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateHeightScrollMine(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         Utils().roundCorners(with: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner], radius: 70, view: self.Header)
-        
-        self.Email.layer.borderWidth = 2;
-        self.Email.layer.borderColor = #colorLiteral(red: 0.7882352941, green: 0.7882352941, blue: 0.8039215686, alpha: 1);
-        self.Email.layer.cornerRadius = 30
-        
-        self.Password.layer.borderWidth = 2;
-        self.Password.layer.borderColor = #colorLiteral(red: 0.7882352941, green: 0.7882352941, blue: 0.8039215686, alpha: 1);
-        self.Password.layer.cornerRadius = 30
+        Utils().setColorBorderView(view: self.Email, border: 1, radius: 30)
+        Utils().setColorBorderView(view: self.Password, border: 1, radius: 30)
         
         self.Scroll.showsHorizontalScrollIndicator = false
         self.Scroll.showsVerticalScrollIndicator = false

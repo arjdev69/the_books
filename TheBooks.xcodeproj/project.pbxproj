@@ -260,8 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				D12DB8BD2613F44B0023C371 /* LoginViewController.swift */,
-				D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */,
 				D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */,
+				D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -26,6 +26,16 @@ public class Utils: NSObject {
         view.layer.masksToBounds = true
     }
     
+    func setColorBorderView(view: UIView, border: Int, radius: Int, _ color: CGColor = #colorLiteral(red: 0.7882352941, green: 0.7882352941, blue: 0.8039215686, alpha: 1)){
+        view.layer.borderWidth = CGFloat(border);
+        view.layer.borderColor = color;
+        view.layer.cornerRadius = CGFloat(radius);
+        view.layer.masksToBounds = true
+    }
+    
+    
+    
+    //MARK: - API
     func generateJsonString(data: Data) -> String {
         let jsonObject = SetupService().generateJsonObject(object: data)
         let jsonData = SetupService().generateJsonData(object: jsonObject)
