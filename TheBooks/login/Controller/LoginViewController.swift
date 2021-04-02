@@ -12,6 +12,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    
     @IBOutlet weak var Header: UIView!
     @IBOutlet weak var Email: UIView!
     @IBOutlet weak var Password: UIView!
@@ -28,7 +29,6 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: Func Setup
-    
     func setupLayout(){
         NotificationCenter.default.addObserver(self, selector: #selector(updateHeightScroll(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateHeightScrollMine(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -45,11 +45,11 @@ class LoginViewController: UIViewController {
     }
     
     @objc func updateHeightScroll(notification:Notification){
-        self.Scroll.contentSize = CGSize(width: self.Scroll.frame.width, height: self.Scroll.frame.height + 280)
+        self.Scroll.contentSize = CGSize(width: self.Scroll.frame.width, height: self.Scroll.frame.height + 200)
     }
     
     @objc func updateHeightScrollMine(notification:Notification){
-        self.Scroll.contentSize = CGSize(width: self.Scroll.frame.width, height: self.Scroll.frame.height - 280)
+        self.Scroll.contentSize = CGSize(width: self.Scroll.frame.width, height: self.Scroll.frame.height - 200)
     }
     
     // MARK: - support funcs
@@ -74,16 +74,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func Login(_ sender: Any) {
         let json = mountJsonServer()
-        UserRepository().addUserService(json) { (add, data) in
-            guard let dataServer = data as? Login.Users else {
-                AlertControl(controller: self).basic(titulo: "Erro no login", mensagem: "Erro ao efetuar login", label: "Fechar", action: .destructive, type: .alert)
+        UserRepository().authUserService(json) { (add, data) in
+            guard data is Login.Users else {
+                AlertControl(controller: self).basic(titulo: "LOGIN", mensagem: "Erro ao efetuar login: \(data).", label: "Fechar", action: .destructive, type: .alert)
                 return
             }
             
-            if dataServer.email.isEmpty || dataServer.password_hash.isEmpty {
-                AlertControl(controller: self).basic(titulo: "Erro no formulário", mensagem: "Campos não pôdem ficarem vazios.", label: "Fechar", action: .destructive, type: .alert)
-                return
-            }
             let HomeBook = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeBook") as? HomeBookViewController
             self.navigationController?.pushViewController(HomeBook ?? self, animated: true)
         }

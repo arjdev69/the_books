@@ -22,7 +22,7 @@ class UserApi: NSObject {
     }()
     
     //MARK: - POST
-    func addUserService(_ params:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void) {
+    func authUserService(_ params:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void) {
         guard let url = URL(string: urlService + "security/authenticate") else {return}
         
         AF.request(url, method: .post, parameters: params,encoding: JSONEncoding.default).responseJSON {
@@ -33,15 +33,10 @@ class UserApi: NSObject {
                 let user = try! JSONDecoder().decode(Login.Users.self, from: jsonString.data(using: .utf8)!)
                 completion(true, user)
                 break
-            case .failure(let error):
-                completion(false, "")
-                debugPrint(error)
+            case .failure( _):
+                completion(false, "User Not Found")
                 break
             }
-            
-            
         }
-        
     }
-    
 }

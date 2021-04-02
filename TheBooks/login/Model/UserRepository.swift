@@ -10,8 +10,8 @@ import UIKit
 
 class UserRepository: NSObject {
     
-    func addUserService(_ user:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void){
-        UserApi().addUserService(user) { (add, data) in
+    func authUserService(_ user:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void){
+        UserApi().authUserService(user) { (add, data) in
             completion(add, data)
         }
     }

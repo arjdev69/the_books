@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var Password: UIView!
     @IBOutlet weak var RepeatPassword: UIView!
     
+    @IBOutlet weak var Loading: UIActivityIndicatorView!
     @IBOutlet weak var TextFieldName: UITextField!
     @IBOutlet weak var TextFiedlEmail: UITextField!
     @IBOutlet weak var TextFieldPassword: UITextField!
@@ -69,18 +70,48 @@ class RegisterViewController: UIViewController {
             "full_name": name,
             "email": email,
             "password_hash": password,
+            "repeat_password": repeatPassword
         ]
         
         return dic
     }
     
-    func validationForm(json: Dictionary<String, Any>){
-        print(json)
+    func validationForm(json: Dictionary<String, Any>) -> Bool{
+        var msg = ""
+        guard let name = json["full_name"] as? String else {return false}
+        guard let email = json["email"] as? String else {return false}
+        guard let password = json["password_hash"] as? String else {return false}
+        guard let repeat_password = json["repeat_password"] as? String else {return false}
+        
+        if name.isEmpty {
+            msg = "Campo nome não pode ficar vazio."
+        }else if email.isEmpty {
+            msg = "Campo email não pode ficar vazio."
+        }else if password.isEmpty {
+            msg = "Campo Senha não pode ficar vazio."
+        }else if repeat_password.isEmpty {
+            msg = "Campo Confirma Senha não pode ficar vazio."
+        }
+        
+        if !msg.isEmpty {
+            AlertControl(controller: self).basic(titulo: "Erro ao efetuar cadastro", mensagem: "\(msg)", label: "Fechar", action: .destructive, type: .alert)
+            
+            return false
+        }
+        
+        return true
     }
     
     //MARK: - ACTIONS
     @IBAction func RegisterUser(_ sender: UIButton) {
         let json = mountJsonServer()
-        validationForm(json: json)
+        if validationForm(json: json){
+            self.Loading.startAnimating()
+            print("data server")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+               self.Loading.stopAnimating()
+            }
+        }
     }
 }
