@@ -93,9 +93,12 @@ class RegisterViewController: UIViewController {
             msg = "Campo Confirma Senha não pode ficar vazio."
         }
         
+        if password != repeat_password {
+            msg = "Por favor insira a mesma senha."
+        }
+        
         if !msg.isEmpty {
             AlertControl(controller: self).basic(titulo: "Erro ao efetuar cadastro", mensagem: "\(msg)", label: "Fechar", action: .destructive, type: .alert)
-            
             return false
         }
         
@@ -107,10 +110,16 @@ class RegisterViewController: UIViewController {
         let json = mountJsonServer()
         if validationForm(json: json){
             self.Loading.startAnimating()
-            print("data server")
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-               self.Loading.stopAnimating()
+            UserRepository().addUserService(json) { (add, data) in
+                if add {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        self.Loading.stopAnimating()
+                        self.navigationController?.popViewController(animated: false)
+                    }
+                } else {
+                    AlertControl(controller: self).basic(titulo: "Erro ao efetuar cadastro", mensagem: "Verifique seus dados e tente novamente.", label: "Fechar", action: .destructive, type: .alert)
+                }
             }
         }
     }

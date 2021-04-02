@@ -17,9 +17,7 @@ class ForgetPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Utils().roundCorners(with: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner], radius: 70, view: self.Header)
-        self.Email.layer.borderWidth = 2;
-        self.Email.layer.borderColor = #colorLiteral(red: 0.7882352941, green: 0.7882352941, blue: 0.8039215686, alpha: 1);
-        self.Email.layer.cornerRadius = 30
+        Utils().setColorBorderView(view: self.Email, border: 1, radius: 30)
         self.btnSendEmail.layer.cornerRadius = 30
     }
 

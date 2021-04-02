@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var TextFieldEmail: UITextField!
     @IBOutlet weak var TextFieldPassword: UITextField!
     @IBOutlet weak var Scroll: UIScrollView!
+    @IBOutlet weak var Loading: UIActivityIndicatorView!
     
     
     @IBOutlet weak var btnLogin: UIButton!
@@ -65,6 +66,25 @@ class LoginViewController: UIViewController {
         return dic
     }
     
+    func validationForm(data: Dictionary<String, Any>) -> Bool{
+        var msg = ""
+        guard let emailUser = data["email"] as? String else {return false}
+        guard let passwordUser = data["password_hash"] as? String else {return false}
+        
+        if emailUser.isEmpty{
+            msg = "Campo email não preenchido."
+        }else if passwordUser.isEmpty{
+            msg = "Campo Senha não preenchido."
+        }
+        
+        if !msg.isEmpty{
+            AlertControl(controller: self).basic(titulo: "Formulário", mensagem: "\(msg).", label: "Fechar", action: .destructive, type: .alert)
+            return false
+        }
+        
+        return true
+    }
+    
     
     //MARK: Actions
     @IBAction func ForgetPassword(_ sender: Any) {
@@ -74,15 +94,23 @@ class LoginViewController: UIViewController {
     
     @IBAction func Login(_ sender: Any) {
         let json = mountJsonServer()
-        UserRepository().authUserService(json) { (add, data) in
-            guard data is Login.Users else {
-                AlertControl(controller: self).basic(titulo: "LOGIN", mensagem: "Erro ao efetuar login: \(data).", label: "Fechar", action: .destructive, type: .alert)
-                return
+        if validationForm(data: json){
+            self.Loading.startAnimating()
+            UserRepository().authUserService(json) { (add, data) in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    self.Loading.stopAnimating()
+                }
+                guard data is Login.Users else {
+                    AlertControl(controller: self).basic(titulo: "LOGIN", mensagem: "Erro ao efetuar login: \(data).", label: "Fechar", action: .destructive, type: .alert)
+                    return
+                }
+                
+                let HomeBook = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeBook") as? HomeBookViewController
+                self.navigationController?.pushViewController(HomeBook ?? self, animated: true)
+                
             }
-            
-            let HomeBook = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeBook") as? HomeBookViewController
-            self.navigationController?.pushViewController(HomeBook ?? self, animated: true)
         }
+        
     }
 }
 
