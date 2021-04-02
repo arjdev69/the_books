@@ -58,6 +58,29 @@ class RegisterViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    //MARK: SUPPORT-FUNCS
+    func mountJsonServer() -> Dictionary<String, Any>  {
+        guard let name = TextFieldName.text else {return [:]}
+        guard let email = TextFiedlEmail.text else {return [:]}
+        guard let password = TextFieldPassword.text else {return [:]}
+        guard let repeatPassword = TextFieldRepeatPassword.text else {return [:]}
+        
+        let dic:Dictionary<String, Any> = [
+            "full_name": name,
+            "email": email,
+            "password_hash": password,
+        ]
+        
+        return dic
+    }
+    
+    func validationForm(json: Dictionary<String, Any>){
+        print(json)
+    }
+    
+    //MARK: - ACTIONS
     @IBAction func RegisterUser(_ sender: UIButton) {
+        let json = mountJsonServer()
+        validationForm(json: json)
     }
 }
