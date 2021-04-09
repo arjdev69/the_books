@@ -32,6 +32,8 @@
 		D12DB8F126140EC20023C371 /* book-add.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EE26140EC10023C371 /* book-add.png */; };
 		D12DB8F226140EC20023C371 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EF26140EC10023C371 /* home.png */; };
 		D12DB8F326140EC20023C371 /* book-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8F026140EC20023C371 /* book-edit.png */; };
+		D1AD9E012617D6F2009A47FA /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E002617D6F2009A47FA /* Books.swift */; };
+		D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */; };
 		D1DD27FA2616960E00214891 /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD27F92616960E00214891 /* AlertControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		D12DB8EE26140EC10023C371 /* book-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-add.png"; sourceTree = "<group>"; };
 		D12DB8EF26140EC10023C371 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		D12DB8F026140EC20023C371 /* book-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-edit.png"; sourceTree = "<group>"; };
+		D1AD9E002617D6F2009A47FA /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1DD27F92616960E00214891 /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
 		D35A32550F6776D8E77A791D /* Pods-TheBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-TheBooksTests/Pods-TheBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9BCA068876123DD5187C689 /* Pods_TheBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +192,7 @@
 		D10A0DCC2614B83400FB2D61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D1AD9E002617D6F2009A47FA /* Books.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 		D10A0DCE2614B9EF00FB2D61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,6 +634,7 @@
 				D10A0DDB2614C27200FB2D61 /* Utils.swift in Sources */,
 				D12A1DE426164BFD00D6969C /* UserApi.swift in Sources */,
 				D120D16E26169DBD00CF01CE /* HomeBookViewController.swift in Sources */,
+				D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */,
 				D12A1DE626164F1B00D6969C /* UserRepository.swift in Sources */,
 				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,
 				D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */,
@@ -635,6 +642,7 @@
 				D12DB8BA2613F44B0023C371 /* AppDelegate.swift in Sources */,
 				D12A1DE02616477700D6969C /* Api.swift in Sources */,
 				D12A1DEA261686BA00D6969C /* SetupService.swift in Sources */,
+				D1AD9E012617D6F2009A47FA /* Books.swift in Sources */,
 				D12A1DE826165CC900D6969C /* Login.swift in Sources */,
 				D1DD27FA2616960E00214891 /* AlertControl.swift in Sources */,
 				D12DB8BC2613F44B0023C371 /* SceneDelegate.swift in Sources */,
