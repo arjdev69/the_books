@@ -14,6 +14,7 @@
 		D120D16E26169DBD00CF01CE /* HomeBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D120D16D26169DBD00CF01CE /* HomeBookViewController.swift */; };
 		D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */; };
 		D12832E5261563FB00BA8CE5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */; };
+		D128AD61261FEA81008D6F71 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D128AD60261FEA81008D6F71 /* AddBookViewController.swift */; };
 		D12A1DE02616477700D6969C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A1DDF2616477700D6969C /* Api.swift */; };
 		D12A1DE426164BFD00D6969C /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A1DE326164BFD00D6969C /* UserApi.swift */; };
 		D12A1DE626164F1B00D6969C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12A1DE526164F1B00D6969C /* UserRepository.swift */; };
@@ -65,6 +66,7 @@
 		D120D16D26169DBD00CF01CE /* HomeBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookViewController.swift; sourceTree = "<group>"; };
 		D12832E226154D5700BA8CE5 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		D12832E4261563FB00BA8CE5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D128AD60261FEA81008D6F71 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		D12A1DDF2616477700D6969C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		D12A1DE326164BFD00D6969C /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		D12A1DE526164F1B00D6969C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		D10A0DD22614BA3000FB2D61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D128AD60261FEA81008D6F71 /* AddBookViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */,
 				D12832E5261563FB00BA8CE5 /* RegisterViewController.swift in Sources */,
 				D12DB8BA2613F44B0023C371 /* AppDelegate.swift in Sources */,
+				D128AD61261FEA81008D6F71 /* AddBookViewController.swift in Sources */,
 				D12A1DE02616477700D6969C /* Api.swift in Sources */,
 				D12A1DEA261686BA00D6969C /* SetupService.swift in Sources */,
 				D1AD9E012617D6F2009A47FA /* Books.swift in Sources */,
