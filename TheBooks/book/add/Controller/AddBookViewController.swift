@@ -15,8 +15,11 @@ class AddBookViewController: UIViewController {
     @IBOutlet weak var titleBookInput: UITextField!
     @IBOutlet weak var nameAuthorBook: UITextField!
 
+    @IBOutlet weak var btnGenre: UIButton!
     @IBOutlet weak var btnSaveBook: UIButton!
     @IBOutlet weak var exitBtnBook: UIButton!
+    @IBOutlet weak var btnStatus: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,9 @@ class AddBookViewController: UIViewController {
         
         Utils().setColorBorderView(view: self.titleBookInput, border: 1, radius: 25)
         Utils().setColorBorderView(view: self.nameAuthorBook, border: 1, radius: 25)
+        Utils().setColorBorderView(view: self.btnGenre, border: 1, radius: 25)
+        Utils().setColorBorderView(view: self.btnStatus, border: 1, radius: 25)
+
 
         Utils().setColorBorderView(view: self.btnSaveBook, border: 0, radius: 23)
         Utils().setColorBorderView(view: self.exitBtnBook, border: 1, radius: 23, #colorLiteral(red: 0.9788214564, green: 0.5642826557, blue: 0.3197808564, alpha: 1))
