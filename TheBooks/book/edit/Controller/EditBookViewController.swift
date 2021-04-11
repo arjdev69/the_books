@@ -28,6 +28,8 @@ class EditBookViewController: UIViewController {
     
     //MARK: SETUP LAYOUT
     func setupLayout(){
+        Utils().roundCorners(with: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner], radius: 35, view: self.Header)
+
         Utils().setColorBorderView(view: self.FieldsFormView, border: 1, radius: 14)
     }
     

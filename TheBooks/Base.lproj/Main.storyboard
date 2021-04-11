@@ -234,8 +234,8 @@
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpd-4T-kgP">
                                                 <rect key="frame" x="5" y="8" width="364" height="572"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dQX-dy-Svu">
-                                                        <rect key="frame" x="5" y="5" width="354" height="555"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dQX-dy-Svu">
+                                                        <rect key="frame" x="5" y="5" width="354" height="495"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMj-1n-6pA" userLabel="TitleField">
                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="85"/>
@@ -268,7 +268,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7LN-aH-q5d" userLabel="AuthorField">
-                                                                <rect key="frame" x="0.0" y="105" width="354" height="85"/>
+                                                                <rect key="frame" x="0.0" y="93" width="354" height="85"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjL-Mj-rIa">
                                                                         <rect key="frame" x="8" y="7.9999999999999982" width="338" height="27.333333333333329"/>
@@ -298,7 +298,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8g-N8-p06" userLabel="GenreField">
-                                                                <rect key="frame" x="0.0" y="210" width="354" height="85"/>
+                                                                <rect key="frame" x="0.0" y="186" width="354" height="85"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gênero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF1-Bn-qF9">
                                                                         <rect key="frame" x="8" y="7.9999999999999982" width="338" height="27.333333333333329"/>
@@ -340,7 +340,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNd-V6-UZp" userLabel="StatusField">
-                                                                <rect key="frame" x="0.0" y="315" width="354" height="85"/>
+                                                                <rect key="frame" x="0.0" y="279" width="354" height="85"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McP-wE-0My">
                                                                         <rect key="frame" x="8" y="7.9999999999999982" width="338" height="27.333333333333329"/>
@@ -382,14 +382,14 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGI-5y-x3t" userLabel="Spacing">
-                                                                <rect key="frame" x="0.0" y="420" width="354" height="30"/>
+                                                                <rect key="frame" x="0.0" y="372" width="354" height="30"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="Wmw-PX-Xfg"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bca-Au-o06" userLabel="ButtonsField">
-                                                                <rect key="frame" x="0.0" y="470" width="354" height="85"/>
+                                                                <rect key="frame" x="0.0" y="410" width="354" height="85"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfI-cF-Vec" userLabel="Delete">
                                                                         <rect key="frame" x="282" y="10" width="64" height="64"/>
@@ -406,9 +406,9 @@
                                                                             <constraint firstAttribute="height" constant="64" id="aJh-dj-ja8"/>
                                                                             <constraint firstAttribute="width" constant="64" id="feu-7B-hE5"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <state key="normal" image="square.and.pencil" catalog="system"/>
+                                                                        <state key="normal" image="checkmark" catalog="system"/>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1380,12 +1380,12 @@
     <resources>
         <image name="back" width="128" height="128"/>
         <image name="book" width="128" height="128"/>
+        <image name="checkmark" catalog="system" width="64" height="56"/>
         <image name="chevron.down" catalog="system" width="64" height="36"/>
         <image name="filter" width="128" height="128"/>
         <image name="key" width="128" height="128"/>
         <image name="mail" width="128" height="128"/>
         <image name="name" width="128" height="128"/>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
 </document>
