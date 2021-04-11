@@ -33,6 +33,7 @@
 		D12DB8F126140EC20023C371 /* book-add.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EE26140EC10023C371 /* book-add.png */; };
 		D12DB8F226140EC20023C371 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EF26140EC10023C371 /* home.png */; };
 		D12DB8F326140EC20023C371 /* book-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8F026140EC20023C371 /* book-edit.png */; };
+		D1AAC65726236C4000E929D7 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAC65626236C4000E929D7 /* EditBookViewController.swift */; };
 		D1AD9E012617D6F2009A47FA /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E002617D6F2009A47FA /* Books.swift */; };
 		D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */; };
 		D1C7869626228DE2008D44A1 /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C7869426228DE2008D44A1 /* DropdownViewController.swift */; };
@@ -94,6 +95,7 @@
 		D12DB8EE26140EC10023C371 /* book-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-add.png"; sourceTree = "<group>"; };
 		D12DB8EF26140EC10023C371 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		D12DB8F026140EC20023C371 /* book-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-edit.png"; sourceTree = "<group>"; };
+		D1AAC65626236C4000E929D7 /* EditBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
 		D1AD9E002617D6F2009A47FA /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1C7869426228DE2008D44A1 /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		D10A0DD32614BA4D00FB2D61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D1AAC65626236C4000E929D7 /* EditBookViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				D120D16E26169DBD00CF01CE /* HomeBookViewController.swift in Sources */,
 				D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */,
 				D12A1DE626164F1B00D6969C /* UserRepository.swift in Sources */,
+				D1AAC65726236C4000E929D7 /* EditBookViewController.swift in Sources */,
 				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,
 				D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */,
 				D12832E5261563FB00BA8CE5 /* RegisterViewController.swift in Sources */,
