@@ -35,6 +35,9 @@
 		D12DB8F326140EC20023C371 /* book-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8F026140EC20023C371 /* book-edit.png */; };
 		D1AD9E012617D6F2009A47FA /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E002617D6F2009A47FA /* Books.swift */; };
 		D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */; };
+		D1C7869626228DE2008D44A1 /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C7869426228DE2008D44A1 /* DropdownViewController.swift */; };
+		D1C7869726228DE2008D44A1 /* DropdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1C7869526228DE2008D44A1 /* DropdownViewController.xib */; };
+		D1C7869B26228E1B008D44A1 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C7869A26228E1B008D44A1 /* XibView.swift */; };
 		D1DD27FA2616960E00214891 /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD27F92616960E00214891 /* AlertControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +96,9 @@
 		D12DB8F026140EC20023C371 /* book-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-edit.png"; sourceTree = "<group>"; };
 		D1AD9E002617D6F2009A47FA /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		D1C7869426228DE2008D44A1 /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
+		D1C7869526228DE2008D44A1 /* DropdownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownViewController.xib; sourceTree = "<group>"; };
+		D1C7869A26228E1B008D44A1 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		D1DD27F92616960E00214891 /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
 		D35A32550F6776D8E77A791D /* Pods-TheBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-TheBooksTests/Pods-TheBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9BCA068876123DD5187C689 /* Pods_TheBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,22 +298,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		D10A0DD92614C23600FB2D61 /* Utils */ = {
+		D10A0DD92614C23600FB2D61 /* utils */ = {
 			isa = PBXGroup;
 			children = (
 				D10A0DDA2614C27200FB2D61 /* Utils.swift */,
 				D12A1DE9261686BA00D6969C /* SetupService.swift */,
 				D1DD27F92616960E00214891 /* AlertControl.swift */,
 			);
-			path = Utils;
+			path = utils;
 			sourceTree = "<group>";
 		};
-		D12A1DDE2616473A00D6969C /* Services */ = {
+		D12A1DDE2616473A00D6969C /* services */ = {
 			isa = PBXGroup;
 			children = (
 				D12A1DDF2616477700D6969C /* Api.swift */,
 			);
-			path = Services;
+			path = services;
 			sourceTree = "<group>";
 		};
 		D12DB8AD2613F44B0023C371 = {
@@ -336,8 +342,9 @@
 			isa = PBXGroup;
 			children = (
 				D12DB8E92613FAF80023C371 /* _layout */,
-				D12A1DDE2616473A00D6969C /* Services */,
-				D10A0DD92614C23600FB2D61 /* Utils */,
+				D1C7868E26228BD4008D44A1 /* components */,
+				D12A1DDE2616473A00D6969C /* services */,
+				D10A0DD92614C23600FB2D61 /* utils */,
 				D10A0DC72614B7B500FB2D61 /* book */,
 				D10A0DC62614B78500FB2D61 /* login */,
 				D12DB8B92613F44B0023C371 /* AppDelegate.swift */,
@@ -378,6 +385,32 @@
 				D12DB8EA26140E3F0023C371 /* login.png */,
 			);
 			path = _layout;
+			sourceTree = "<group>";
+		};
+		D1C7868E26228BD4008D44A1 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D1C7869826228DF6008D44A1 /* XibView */,
+				D1C7868F26228BF7008D44A1 /* dropdown */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		D1C7868F26228BF7008D44A1 /* dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				D1C7869426228DE2008D44A1 /* DropdownViewController.swift */,
+				D1C7869526228DE2008D44A1 /* DropdownViewController.xib */,
+			);
+			path = dropdown;
+			sourceTree = "<group>";
+		};
+		D1C7869826228DF6008D44A1 /* XibView */ = {
+			isa = PBXGroup;
+			children = (
+				D1C7869A26228E1B008D44A1 /* XibView.swift */,
+			);
+			path = XibView;
 			sourceTree = "<group>";
 		};
 		EE90461ECC2D28BA1499B6BA /* Frameworks */ = {
@@ -506,6 +539,7 @@
 				D12DB8ED26140E700023C371 /* register.png in Resources */,
 				D12DB8C32613F44C0023C371 /* Assets.xcassets in Resources */,
 				D12DB8F126140EC20023C371 /* book-add.png in Resources */,
+				D1C7869726228DE2008D44A1 /* DropdownViewController.xib in Resources */,
 				D12DB8C12613F44B0023C371 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +684,8 @@
 				D12A1DE826165CC900D6969C /* Login.swift in Sources */,
 				D1DD27FA2616960E00214891 /* AlertControl.swift in Sources */,
 				D12DB8BC2613F44B0023C371 /* SceneDelegate.swift in Sources */,
+				D1C7869B26228E1B008D44A1 /* XibView.swift in Sources */,
+				D1C7869626228DE2008D44A1 /* DropdownViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
