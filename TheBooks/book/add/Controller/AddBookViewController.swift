@@ -47,4 +47,7 @@ class AddBookViewController: UIViewController {
     @IBAction func btnBackAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func btnGenreAction(_ sender: Any) {
+    }
 }

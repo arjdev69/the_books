@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2hC-De-IEH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qcQ-QX-n7j">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -586,6 +586,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="fi3-a3-GpB"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="btnGenreAction:" destination="Mlx-aU-GXs" eventType="touchUpInside" id="B5O-rj-8FK"/>
+                                                            <segue destination="2vv-bK-15v" kind="presentation" id="JJQ-rs-aXh"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pRX-v4-eXw">
                                                         <rect key="frame" x="330" y="36.333333333333329" width="32" height="22"/>
@@ -625,6 +629,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="MA4-Ox-0jV"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <segue destination="2vv-bK-15v" kind="popoverPresentation" popoverAnchorView="pmS-T8-Qn0" id="CDG-35-3qe">
+                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                            </segue>
+                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EUh-ol-gxf">
                                                         <rect key="frame" x="333" y="40.333333333333329" width="32" height="22"/>
@@ -759,6 +768,34 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="3974" y="-697"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BcY-ja-VT2">
+            <objects>
+                <viewController id="2vv-bK-15v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5sm-U1-NyN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-aM-8dn" customClass="DropdownView" customModule="TheBooks" customModuleProvider="target">
+                                <rect key="frame" x="87" y="294" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UG1-aM-8dn" firstAttribute="top" secondItem="X8p-mi-EhO" secondAttribute="top" constant="294" id="7M0-jM-OYT"/>
+                            <constraint firstItem="UG1-aM-8dn" firstAttribute="leading" secondItem="X8p-mi-EhO" secondAttribute="leading" constant="87" id="IsV-E5-hP1"/>
+                            <constraint firstItem="UG1-aM-8dn" firstAttribute="centerY" secondItem="5sm-U1-NyN" secondAttribute="centerY" id="lmg-wL-6T9"/>
+                            <constraint firstItem="UG1-aM-8dn" firstAttribute="centerX" secondItem="5sm-U1-NyN" secondAttribute="centerX" id="oZq-xO-VbT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X8p-mi-EhO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ojn-ia-i7L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRj-fh-x12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4860.8695652173919" y="-697.01086956521749"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1388,4 +1425,7 @@
         <image name="name" width="128" height="128"/>
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CDG-35-3qe"/>
+    </inferredMetricsTieBreakers>
 </document>
