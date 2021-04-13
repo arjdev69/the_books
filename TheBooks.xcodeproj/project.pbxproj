@@ -36,8 +36,6 @@
 		D1AAC65726236C4000E929D7 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAC65626236C4000E929D7 /* EditBookViewController.swift */; };
 		D1AAC6622623CE7100E929D7 /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1AAC6612623CE7100E929D7 /* DropdownView.xib */; };
 		D1AAC6642623CE8A00E929D7 /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAC6632623CE8A00E929D7 /* DropdownView.swift */; };
-		D1AAC6662623D16500E929D7 /* LoginFieldsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1AAC6652623D16400E929D7 /* LoginFieldsView.xib */; };
-		D1AAC6682623D16B00E929D7 /* LoginFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAC6672623D16B00E929D7 /* LoginFieldsView.swift */; };
 		D1AD9E012617D6F2009A47FA /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E002617D6F2009A47FA /* Books.swift */; };
 		D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */; };
 		D1C7869B26228E1B008D44A1 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C7869A26228E1B008D44A1 /* XibView.swift */; };
@@ -100,8 +98,6 @@
 		D1AAC65626236C4000E929D7 /* EditBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
 		D1AAC6612623CE7100E929D7 /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
 		D1AAC6632623CE8A00E929D7 /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
-		D1AAC6652623D16400E929D7 /* LoginFieldsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginFieldsView.xib; sourceTree = "<group>"; };
-		D1AAC6672623D16B00E929D7 /* LoginFieldsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFieldsView.swift; sourceTree = "<group>"; };
 		D1AD9E002617D6F2009A47FA /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1C7869A26228E1B008D44A1 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
@@ -397,8 +393,6 @@
 		D1AAC6602623CE5A00E929D7 /* dropdown */ = {
 			isa = PBXGroup;
 			children = (
-				D1AAC6672623D16B00E929D7 /* LoginFieldsView.swift */,
-				D1AAC6652623D16400E929D7 /* LoginFieldsView.xib */,
 				D1AAC6612623CE7100E929D7 /* DropdownView.xib */,
 				D1AAC6632623CE8A00E929D7 /* DropdownView.swift */,
 			);
@@ -548,7 +542,6 @@
 				D12DB8F226140EC20023C371 /* home.png in Resources */,
 				D12DB8ED26140E700023C371 /* register.png in Resources */,
 				D12DB8C32613F44C0023C371 /* Assets.xcassets in Resources */,
-				D1AAC6662623D16500E929D7 /* LoginFieldsView.xib in Resources */,
 				D12DB8F126140EC20023C371 /* book-add.png in Resources */,
 				D12DB8C12613F44B0023C371 /* Main.storyboard in Resources */,
 			);
@@ -685,7 +678,6 @@
 				D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */,
 				D12A1DE626164F1B00D6969C /* UserRepository.swift in Sources */,
 				D1AAC65726236C4000E929D7 /* EditBookViewController.swift in Sources */,
-				D1AAC6682623D16B00E929D7 /* LoginFieldsView.swift in Sources */,
 				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,
 				D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */,
 				D12832E5261563FB00BA8CE5 /* RegisterViewController.swift in Sources */,

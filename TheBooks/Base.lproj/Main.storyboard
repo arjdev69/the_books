@@ -588,7 +588,7 @@
                                                         </constraints>
                                                         <connections>
                                                             <action selector="btnGenreAction:" destination="Mlx-aU-GXs" eventType="touchUpInside" id="B5O-rj-8FK"/>
-                                                            <segue destination="2vv-bK-15v" kind="presentation" id="JJQ-rs-aXh"/>
+                                                            <segue destination="2vv-bK-15v" kind="show" id="JJQ-rs-aXh"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pRX-v4-eXw">
@@ -772,23 +772,18 @@
         <!--View Controller-->
         <scene sceneID="BcY-ja-VT2">
             <objects>
-                <viewController id="2vv-bK-15v" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="2vv-bK-15v" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5sm-U1-NyN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-aM-8dn" customClass="DropdownView" customModule="TheBooks" customModuleProvider="target">
-                                <rect key="frame" x="87" y="294" width="240" height="128"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-aM-8dn" customClass="DropdownView" customModule="TheBooks" customModuleProvider="target">
+                                <rect key="frame" x="20" y="61" width="364" height="632"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="UG1-aM-8dn" firstAttribute="top" secondItem="X8p-mi-EhO" secondAttribute="top" constant="294" id="7M0-jM-OYT"/>
-                            <constraint firstItem="UG1-aM-8dn" firstAttribute="leading" secondItem="X8p-mi-EhO" secondAttribute="leading" constant="87" id="IsV-E5-hP1"/>
-                            <constraint firstItem="UG1-aM-8dn" firstAttribute="centerY" secondItem="5sm-U1-NyN" secondAttribute="centerY" id="lmg-wL-6T9"/>
-                            <constraint firstItem="UG1-aM-8dn" firstAttribute="centerX" secondItem="5sm-U1-NyN" secondAttribute="centerX" id="oZq-xO-VbT"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.96386998891830444" green="0.61370819807052612" blue="0.35871833562850952" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="X8p-mi-EhO"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ojn-ia-i7L"/>
@@ -1426,6 +1421,6 @@
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CDG-35-3qe"/>
+        <segue reference="JJQ-rs-aXh"/>
     </inferredMetricsTieBreakers>
 </document>
