@@ -34,7 +34,7 @@ public class Utils: NSObject {
     }
     
     func openPickerView(pickerView: UIPickerView, height: CGFloat) -> UIPickerView{
-        pickerView.backgroundColor = UIColor.orange
+        pickerView.backgroundColor = UIColor(red: 250.0/255.0, green: 144.0/255.0, blue: 82.0/255.0, alpha: 0.95)
         pickerView.setValue(UIColor.white, forKey: "textColor")
         pickerView.autoresizingMask = .flexibleWidth
         pickerView.contentMode = .center
