@@ -34,6 +34,7 @@
 		D12DB8F226140EC20023C371 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8EF26140EC10023C371 /* home.png */; };
 		D12DB8F326140EC20023C371 /* book-edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D12DB8F026140EC20023C371 /* book-edit.png */; };
 		D147A40D262B354700B9AB37 /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A40C262B354700B9AB37 /* DropdownViewController.swift */; };
+		D178A8B0262C733200734D4B /* BookPickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D178A8AF262C733200734D4B /* BookPickerExtension.swift */; };
 		D1AAC65726236C4000E929D7 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAC65626236C4000E929D7 /* EditBookViewController.swift */; };
 		D1AAC6622623CE7100E929D7 /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1AAC6612623CE7100E929D7 /* DropdownView.xib */; };
 		D1AAC6642623CE8A00E929D7 /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAC6632623CE8A00E929D7 /* DropdownView.swift */; };
@@ -97,6 +98,7 @@
 		D12DB8EF26140EC10023C371 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		D12DB8F026140EC20023C371 /* book-edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-edit.png"; sourceTree = "<group>"; };
 		D147A40C262B354700B9AB37 /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
+		D178A8AF262C733200734D4B /* BookPickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPickerExtension.swift; sourceTree = "<group>"; };
 		D1AAC65626236C4000E929D7 /* EditBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
 		D1AAC6612623CE7100E929D7 /* DropdownView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
 		D1AAC6632623CE8A00E929D7 /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		D10A0DC92614B80400FB2D61 /* add */ = {
 			isa = PBXGroup;
 			children = (
+				D178A8AE262C72FD00734D4B /* Extension */,
 				D10A0DD02614BA2300FB2D61 /* Model */,
 				D10A0DD12614BA2B00FB2D61 /* View */,
 				D10A0DD22614BA3000FB2D61 /* Controller */,
@@ -390,6 +393,14 @@
 				D12DB8EA26140E3F0023C371 /* login.png */,
 			);
 			path = _layout;
+			sourceTree = "<group>";
+		};
+		D178A8AE262C72FD00734D4B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D178A8AF262C733200734D4B /* BookPickerExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D1AAC6602623CE5A00E929D7 /* dropdown */ = {
@@ -679,6 +690,7 @@
 				D12A1DE426164BFD00D6969C /* UserApi.swift in Sources */,
 				D120D16E26169DBD00CF01CE /* HomeBookViewController.swift in Sources */,
 				D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */,
+				D178A8B0262C733200734D4B /* BookPickerExtension.swift in Sources */,
 				D12A1DE626164F1B00D6969C /* UserRepository.swift in Sources */,
 				D1AAC65726236C4000E929D7 /* EditBookViewController.swift in Sources */,
 				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,

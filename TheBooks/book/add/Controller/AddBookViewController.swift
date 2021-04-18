@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct list {
+    var type = "genre"
+    var list = [""]
+}
+
 class AddBookViewController: UIViewController {
     
     @IBOutlet weak var Header: UIView!
@@ -23,8 +28,10 @@ class AddBookViewController: UIViewController {
     
     var pickerView = UIPickerView();
     
+    var genre = ["Romance", "Fábula", "Conto", "Crônica", "Ensaio", "Poesia", "Autobiografia", "Horror", "Literatura", "Fantasia", "Ficção Científica", "Folhetim"]
+    var status = ["Lido", "Para Ler", "Não Lido"]
     
-    var list = ["DFFDF", "FSDF", "DSFFDF"]
+    var combo = list()
     
     
     override func viewDidLoad() {
@@ -64,11 +71,16 @@ class AddBookViewController: UIViewController {
     }
     
     @IBAction func btnGenreAction(_ sender: Any) {
-        pickerView.backgroundColor = UIColor.orange
-        pickerView.setValue(UIColor.black, forKey: "textColor")
-        pickerView.autoresizingMask = .flexibleWidth
-        pickerView.contentMode = .center
-        pickerView.frame = CGRect.init(x: 0.0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 300)
+        combo.type = "genre"
+        combo.list = genre
+        let pickerView = Utils().openPickerView(pickerView: self.pickerView, height: CGFloat(150))
+        self.view.addSubview(pickerView)
+    }
+    
+    @IBAction func btnStatusAction(_ sender: Any) {
+        combo.type = "status"
+        combo.list = status
+        let pickerView = Utils().openPickerView(pickerView: self.pickerView, height: CGFloat(150))
         self.view.addSubview(pickerView)
     }
     
@@ -76,25 +88,4 @@ class AddBookViewController: UIViewController {
         
     }
     
-}
-
-
-extension AddBookViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return list.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return list[row].capitalized
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        btnGenre.setTitle(list[row], for: .normal)
-        pickerView.removeFromSuperview()
-    }
 }
