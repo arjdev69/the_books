@@ -588,7 +588,6 @@
                                                         </constraints>
                                                         <connections>
                                                             <action selector="btnGenreAction:" destination="Mlx-aU-GXs" eventType="touchUpInside" id="B5O-rj-8FK"/>
-                                                            <segue destination="2vv-bK-15v" kind="show" id="JJQ-rs-aXh"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pRX-v4-eXw">
@@ -629,11 +628,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="MA4-Ox-0jV"/>
                                                         </constraints>
-                                                        <connections>
-                                                            <segue destination="2vv-bK-15v" kind="popoverPresentation" popoverAnchorView="pmS-T8-Qn0" id="CDG-35-3qe">
-                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                            </segue>
-                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EUh-ol-gxf">
                                                         <rect key="frame" x="333" y="40.333333333333329" width="32" height="22"/>
@@ -679,6 +673,9 @@
                                                                         <state key="normal" title="SALVAR">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="saveBook:" destination="Mlx-aU-GXs" eventType="touchUpInside" id="ut2-tF-r69"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -769,16 +766,25 @@
             </objects>
             <point key="canvasLocation" x="3974" y="-697"/>
         </scene>
-        <!--View Controller-->
+        <!--Dropdown View Controller-->
         <scene sceneID="BcY-ja-VT2">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="2vv-bK-15v" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DropdownPage" modalPresentationStyle="fullScreen" id="2vv-bK-15v" customClass="DropdownViewController" customModule="TheBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5sm-U1-NyN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1E-2F-UfP">
+                                <rect key="frame" x="29" y="55" width="70" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="btnClose:" destination="2vv-bK-15v" eventType="touchUpInside" id="Ela-1G-D03"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-aM-8dn" customClass="DropdownView" customModule="TheBooks" customModuleProvider="target">
-                                <rect key="frame" x="20" y="61" width="364" height="632"/>
+                                <rect key="frame" x="25" y="154" width="364" height="429"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -787,10 +793,14 @@
                         <viewLayoutGuide key="safeArea" id="X8p-mi-EhO"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ojn-ia-i7L"/>
+                    <connections>
+                        <outlet property="btnClose" destination="m1E-2F-UfP" id="jqp-9a-c7Z"/>
+                        <outlet property="dropView" destination="UG1-aM-8dn" id="m79-Lq-7iM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRj-fh-x12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4860.8695652173919" y="-697.01086956521749"/>
+            <point key="canvasLocation" x="5191" y="-1723"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1420,7 +1430,4 @@
         <image name="name" width="128" height="128"/>
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="JJQ-rs-aXh"/>
-    </inferredMetricsTieBreakers>
 </document>

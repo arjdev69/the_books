@@ -9,30 +9,34 @@
 import UIKit
 
 @IBDesignable
-class DropdownView: XibView, UITableViewDataSource, UITableViewDelegate {
-    
-    
+class DropdownView: XibView, UIPickerViewDelegate, UIPickerViewDataSource {
+ 
     @IBOutlet private weak var ViewBox: UIView!
     
-    @IBOutlet weak var dropdownViewComp: UITableView!
+    @IBOutlet weak var pickerView: UIPickerView!
     
+    var dataList: [String] = []
+    var selected:String = ""
+        
     override func setupView() {
-        print("DFSGDHDHGD")
+        pickerView.delegate = self
+        pickerView.dataSource = self
     }
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "item.nome\(indexPath.row)"
-        
-        print("item.nome\(indexPath.row)")
-        
-        
-        return cell
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.dataList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selected = dataList[row]
     }
     
 }
