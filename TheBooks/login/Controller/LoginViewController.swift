@@ -87,10 +87,7 @@ class LoginViewController: UIViewController {
     
     
     //MARK: Actions
-    @IBAction func ForgetPassword(_ sender: Any) {
-        
-    }
-    
+    @IBAction func ForgetPassword(_ sender: Any) {}
     
     @IBAction func Login(_ sender: Any) {
         let json = mountJsonServer()

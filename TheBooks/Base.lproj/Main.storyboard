@@ -589,7 +589,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="fi3-a3-GpB"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                        <state key="normal">
+                                                        <state key="normal" title=" ">
                                                             <color key="titleColor" red="0.97978156810000006" green="0.57825690510000005" blue="0.35455334189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -635,7 +635,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="MA4-Ox-0jV"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                        <state key="normal">
+                                                        <state key="normal" title=" ">
                                                             <color key="titleColor" red="0.97978156810000006" green="0.57825690510000005" blue="0.35455334189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>

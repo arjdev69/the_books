@@ -10,8 +10,6 @@ import UIKit
 
 import Alamofire
 
-
-
 class UserApi: NSObject {
     
     // MARK: - attributes
@@ -52,7 +50,7 @@ class UserApi: NSObject {
                 completion(true, user)
                 break
             case .failure( _):
-                completion(false, "User Not Found")
+                completion(false, "Failed in register user")
                 break
             }
         }

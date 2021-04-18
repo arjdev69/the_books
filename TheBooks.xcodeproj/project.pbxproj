@@ -42,6 +42,9 @@
 		D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */; };
 		D1C7869B26228E1B008D44A1 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C7869A26228E1B008D44A1 /* XibView.swift */; };
 		D1DD27FA2616960E00214891 /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD27F92616960E00214891 /* AlertControl.swift */; };
+		D1F84C50262CB45E006223AB /* BooksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F84C4F262CB45E006223AB /* BooksApi.swift */; };
+		D1F84C54262CB720006223AB /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F84C53262CB720006223AB /* BooksModel.swift */; };
+		D1F84C56262CB7CB006223AB /* BooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F84C55262CB7CB006223AB /* BooksRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		D1AD9E022617E0B0009A47FA /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1C7869A26228E1B008D44A1 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		D1DD27F92616960E00214891 /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
+		D1F84C4F262CB45E006223AB /* BooksApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApi.swift; sourceTree = "<group>"; };
+		D1F84C53262CB720006223AB /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
+		D1F84C55262CB7CB006223AB /* BooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksRepository.swift; sourceTree = "<group>"; };
 		D35A32550F6776D8E77A791D /* Pods-TheBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-TheBooksTests/Pods-TheBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9BCA068876123DD5187C689 /* Pods_TheBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE8C7D9D5543BFD972A1AE5 /* Pods_TheBooks_TheBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheBooks_TheBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +244,9 @@
 		D10A0DD02614BA2300FB2D61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D1F84C4F262CB45E006223AB /* BooksApi.swift */,
+				D1F84C53262CB720006223AB /* BooksModel.swift */,
+				D1F84C55262CB7CB006223AB /* BooksRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -692,6 +701,7 @@
 				D1AD9E032617E0B0009A47FA /* BookCollectionViewCell.swift in Sources */,
 				D178A8B0262C733200734D4B /* BookPickerExtension.swift in Sources */,
 				D12A1DE626164F1B00D6969C /* UserRepository.swift in Sources */,
+				D1F84C54262CB720006223AB /* BooksModel.swift in Sources */,
 				D1AAC65726236C4000E929D7 /* EditBookViewController.swift in Sources */,
 				D12DB8BE2613F44B0023C371 /* LoginViewController.swift in Sources */,
 				D12832E326154D5700BA8CE5 /* ForgetPasswordViewController.swift in Sources */,
@@ -700,11 +710,13 @@
 				D128AD61261FEA81008D6F71 /* AddBookViewController.swift in Sources */,
 				D12A1DE02616477700D6969C /* Api.swift in Sources */,
 				D12A1DEA261686BA00D6969C /* SetupService.swift in Sources */,
+				D1F84C50262CB45E006223AB /* BooksApi.swift in Sources */,
 				D1AD9E012617D6F2009A47FA /* Books.swift in Sources */,
 				D147A40D262B354700B9AB37 /* DropdownViewController.swift in Sources */,
 				D12A1DE826165CC900D6969C /* Login.swift in Sources */,
 				D1DD27FA2616960E00214891 /* AlertControl.swift in Sources */,
 				D12DB8BC2613F44B0023C371 /* SceneDelegate.swift in Sources */,
+				D1F84C56262CB7CB006223AB /* BooksRepository.swift in Sources */,
 				D1C7869B26228E1B008D44A1 /* XibView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
