@@ -10,10 +10,15 @@ import UIKit
 
 class BookCollectionViewCell: UICollectionViewCell {
     
-    func setupCellCollection(){
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
-        layer.cornerRadius = 8
+    
+    
+    @IBOutlet weak var titleBook: UILabel!
+    @IBOutlet weak var authorName: UILabel!
+    
+    
+    func setupCellCollection(book:BooksHome){
+        self.titleBook.text = book.title
+        self.authorName.text = book.author_name
     }
     
 }

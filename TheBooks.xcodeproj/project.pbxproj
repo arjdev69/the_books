@@ -42,6 +42,7 @@
 		D1B3E2F1262CD0D500633FD9 /* BooksHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B3E2F0262CD0D500633FD9 /* BooksHome.swift */; };
 		D1C7869B26228E1B008D44A1 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C7869A26228E1B008D44A1 /* XibView.swift */; };
 		D1DD27FA2616960E00214891 /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD27F92616960E00214891 /* AlertControl.swift */; };
+		D1DF970E262D2BF800414B97 /* BooksHomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DF970D262D2BF800414B97 /* BooksHomeExtension.swift */; };
 		D1F84C50262CB45E006223AB /* BooksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F84C4F262CB45E006223AB /* BooksApi.swift */; };
 		D1F84C54262CB720006223AB /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F84C53262CB720006223AB /* BooksModel.swift */; };
 		D1F84C56262CB7CB006223AB /* BooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F84C55262CB7CB006223AB /* BooksRepository.swift */; };
@@ -109,6 +110,7 @@
 		D1B3E2F0262CD0D500633FD9 /* BooksHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksHome.swift; sourceTree = "<group>"; };
 		D1C7869A26228E1B008D44A1 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		D1DD27F92616960E00214891 /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
+		D1DF970D262D2BF800414B97 /* BooksHomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksHomeExtension.swift; sourceTree = "<group>"; };
 		D1F84C4F262CB45E006223AB /* BooksApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApi.swift; sourceTree = "<group>"; };
 		D1F84C53262CB720006223AB /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		D1F84C55262CB7CB006223AB /* BooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksRepository.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		D10A0DCB2614B81D00FB2D61 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				D1B3E2F2262D2A3900633FD9 /* Extension */,
 				D1B3E2EF262CD0C300633FD9 /* Model */,
 				D10A0DCE2614B9EF00FB2D61 /* View */,
 				D10A0DCF2614B9F500FB2D61 /* Controller */,
@@ -404,6 +407,14 @@
 				D1B3E2F0262CD0D500633FD9 /* BooksHome.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D1B3E2F2262D2A3900633FD9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D1DF970D262D2BF800414B97 /* BooksHomeExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D1C7868E26228BD4008D44A1 /* components */ = {
@@ -695,6 +706,7 @@
 				D12A1DE02616477700D6969C /* Api.swift in Sources */,
 				D12A1DEA261686BA00D6969C /* SetupService.swift in Sources */,
 				D1F84C50262CB45E006223AB /* BooksApi.swift in Sources */,
+				D1DF970E262D2BF800414B97 /* BooksHomeExtension.swift in Sources */,
 				D1B3E2F1262CD0D500633FD9 /* BooksHome.swift in Sources */,
 				D147A40D262B354700B9AB37 /* DropdownViewController.swift in Sources */,
 				D12A1DE826165CC900D6969C /* Login.swift in Sources */,

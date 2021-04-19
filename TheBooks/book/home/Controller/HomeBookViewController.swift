@@ -19,26 +19,21 @@ class HomeBookViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var collectionBooks: UICollectionView!
     @IBOutlet weak var addPlusBook: UIButton!
     
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight: CGFloat!
+    
     var books:Array<BooksHome> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupLayout()
-        
-        BooksApi().getAllBooksService { (books) in
-            self.books = books.all
-            self.collectionBooks.reloadData()
-        }
+        setupLayout()
+        setupCollectionView()
+        getBooksList()
     }
     
-    //MARK: FUNC-SETUP
-    func setupLayout(){
-        self.SearchBarView.layer.cornerRadius = 15
-        self.SearchField.setImage(UIImage(named: "searchImg"), for: .search, state: .normal)
-        self.BoxBtn.layer.cornerRadius = 45
-        self.addPlusBook.layer.cornerRadius = 35
-        collectionBooks.dataSource = self
-        collectionBooks.delegate = self
+    override func viewWillAppear(_ animated: Bool) {
+        getBooksList()
     }
     
     //MARK: SETUP-VIEW
@@ -47,19 +42,22 @@ class HomeBookViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let celulaPacote = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell;
-        return celulaPacote
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell;
+        
+        cell.setupCellCollection(book: books[indexPath.item])
+
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 25)
+        return CGSize(width: screenWidth/3-11, height: screenWidth/2)
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("click item")
     }
     
-    
+    //MARK: Funcs Actions
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
