@@ -11,7 +11,7 @@ import UIKit
 import Alamofire
 
 class BooksApi: NSObject {
-
+    
     // MARK: - attributes
     lazy var urlService:String = {
         guard let url = Api().getUrlService() else { return "" }
@@ -36,6 +36,18 @@ class BooksApi: NSObject {
                 break
             }
         }
+    }
+    
+    func getAllBooksService(completion:@escaping(_ data:BooksList) -> Void){
+        guard let url = URL(string: urlService + "books") else {return}
+        
+        let request = AF.request(url)
+
+        request.responseDecodable(of: BooksList.self) { (response) in
+          guard let books = response.value else { return }
+            completion(books)
+        }
+
     }
     
 }

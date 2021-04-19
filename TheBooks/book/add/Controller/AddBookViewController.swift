@@ -23,6 +23,7 @@ class AddBookViewController: UIViewController {
     @IBOutlet weak var btnSaveBook: UIButton!
     @IBOutlet weak var exitBtnBook: UIButton!
     @IBOutlet weak var btnStatus: UIButton!
+    @IBOutlet weak var Loading: UIActivityIndicatorView!
     
     //MARK: Objects Layout
     var pickerView = UIPickerView();
@@ -120,12 +121,12 @@ class AddBookViewController: UIViewController {
     @IBAction func saveBook(_ sender: UIButton) {
         let json = mountJsonServer()
         if validationForm(json: json){
-            //self.Loading.startAnimating()
+            self.Loading.startAnimating()
             
             BooksRepository().addBooksService(json) { (add, data) in
                 if add {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                        //self.Loading.stopAnimating()
+                        self.Loading.stopAnimating()
                         self.navigationController?.popViewController(animated: false)
                     }
                 } else {

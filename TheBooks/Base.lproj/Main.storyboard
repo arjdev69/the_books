@@ -745,6 +745,12 @@
                                     <constraint firstItem="AaC-4a-B9F" firstAttribute="centerX" secondItem="iQp-Bt-Zr8" secondAttribute="centerX" id="sfL-QA-8Qo"/>
                                 </constraints>
                             </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Odt-EH-xLg" userLabel="Loading">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="915"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.23529411759999999" alpha="0.2971157962" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.99215686270000003" green="0.57254901960000004" blue="0.23529411759999999" alpha="0.95349957190000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -761,6 +767,7 @@
                     <navigationItem key="navigationItem" id="hPq-LF-wQm"/>
                     <connections>
                         <outlet property="Header" destination="Qo9-N3-Qy2" id="VYY-Gs-qHu"/>
+                        <outlet property="Loading" destination="Odt-EH-xLg" id="wXy-me-Nds"/>
                         <outlet property="btnGenre" destination="acu-FC-oKx" id="UeN-j7-2wl"/>
                         <outlet property="btnSaveBook" destination="5df-87-sGJ" id="Rfa-64-FVs"/>
                         <outlet property="btnStatus" destination="pmS-T8-Qn0" id="Ym9-or-5Yf"/>
@@ -777,7 +784,7 @@
                     <viewLayoutGuide key="safeArea" id="zTi-rk-93d"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3974" y="-697"/>
+            <point key="canvasLocation" x="3973.913043478261" y="-697.01086956521749"/>
         </scene>
         <!--Dropdown View Controller-->
         <scene sceneID="BcY-ja-VT2">

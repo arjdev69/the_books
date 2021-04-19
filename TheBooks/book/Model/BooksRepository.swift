@@ -16,4 +16,10 @@ class BooksRepository: NSObject {
         }
     }
     
+    func getAllBooksService(completion:@escaping(_ data:Any) -> Void){
+        BooksApi().getAllBooksService { (data) in
+            completion(data)
+        }
+    }
+    
 }

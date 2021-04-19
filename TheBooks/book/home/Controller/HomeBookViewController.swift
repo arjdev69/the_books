@@ -19,9 +19,16 @@ class HomeBookViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var collectionBooks: UICollectionView!
     @IBOutlet weak var addPlusBook: UIButton!
     
+    var books:Array<BooksHome> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLayout()
+        
+        BooksApi().getAllBooksService { (books) in
+            self.books = books.all
+            self.collectionBooks.reloadData()
+        }
     }
     
     //MARK: FUNC-SETUP
@@ -36,7 +43,7 @@ class HomeBookViewController: UIViewController, UICollectionViewDataSource, UICo
     
     //MARK: SETUP-VIEW
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,6 +65,5 @@ class HomeBookViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     @IBAction func addPlusBook(_ sender: UIButton) {
-        print("1454545")
     }
 }
