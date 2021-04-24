@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension HomeBookViewController {
+extension HomeBookViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     //MARK: Layout
     func setupLayout(){
@@ -38,6 +38,32 @@ extension HomeBookViewController {
             self.books = books.all
             self.collectionBooks.reloadData()
         }
+    }
+    
+    //MARK: SETUP-VIEW
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.books.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell;
+        
+        cell.setupCellCollection(book: books[indexPath.item])
+
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: screenWidth/3-11, height: screenWidth/2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "editBook") as! EditBookViewController
+        
+        controller.bookID = books[indexPath.item].book_id
+        
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

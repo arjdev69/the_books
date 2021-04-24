@@ -22,4 +22,10 @@ class BooksRepository: NSObject {
         }
     }
     
+    func getBookById(id:String, completion:@escaping(_ data:BooksHome) -> Void){
+        BooksApi().getBookById(id: id) { (books) in
+            completion(books)
+        }
+    }
+    
 }

@@ -23,7 +23,7 @@ class BooksApi: NSObject {
     func addBooksService(_ params:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void){
         guard let url = URL(string: urlService + "book") else {return}
         
-        AF.request(url, method: .post, parameters: params,encoding: JSONEncoding.default).responseJSON {
+        AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON {
             AFdata in
             switch AFdata.result{
             case .success:
@@ -48,6 +48,17 @@ class BooksApi: NSObject {
             completion(books)
         }
 
+    }
+    
+    func getBookById(id:String, completion:@escaping(_ data:BooksHome) -> Void){
+        guard let url = URL(string: urlService + "book/\(id)") else {return}
+        
+        let request = AF.request(url)
+
+        request.responseDecodable(of: BooksHome.self) { (response) in
+          guard let book = response.value else { return }
+            completion(book)
+        }
     }
     
 }

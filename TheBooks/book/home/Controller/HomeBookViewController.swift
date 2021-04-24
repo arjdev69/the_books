@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeBookViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UISearchBarDelegate {
+class HomeBookViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var Header: UIView!
     @IBOutlet weak var SearchBarView: UIView!
@@ -34,27 +34,6 @@ class HomeBookViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func viewWillAppear(_ animated: Bool) {
         getBooksList()
-    }
-    
-    //MARK: SETUP-VIEW
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.books.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell;
-        
-        cell.setupCellCollection(book: books[indexPath.item])
-
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: screenWidth/3-11, height: screenWidth/2)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("click item")
     }
     
     //MARK: Funcs Actions
