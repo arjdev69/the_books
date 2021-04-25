@@ -13,11 +13,26 @@ extension EditBookViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        1
+        return combo.list.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return combo.list[row].capitalized
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if combo.type == "genre" {
+            genreFieldForm.setTitle(combo.list[row], for: .normal)
+        } else {
+            statusFieldForm.setTitle(combo.list[row], for: .normal)
+        }
+        
+        pickerView.removeFromSuperview()
     }
     
 

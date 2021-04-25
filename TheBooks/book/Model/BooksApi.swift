@@ -38,6 +38,26 @@ class BooksApi: NSObject {
         }
     }
     
+    func editBookService(id:String, _ params:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void){
+        
+        guard let url = URL(string: urlService + "book/\(id)") else {return}
+        
+        AF.request(url, method: .put, parameters: params, encoding: JSONEncoding.default).responseJSON {
+            AFdata in
+            switch AFdata.result{
+            case .success:
+                let jsonString = Utils().generateJsonString(data: AFdata.data!)
+                let book = try! JSONDecoder().decode(BooksModel.Books.self, from: jsonString.data(using: .utf8)!)
+                completion(true, book)
+                break
+            case .failure( _):
+                completion(false, "Failed register book")
+                break
+            }
+        }
+        
+    }
+    
     func getAllBooksService(completion:@escaping(_ data:BooksList) -> Void){
         guard let url = URL(string: urlService + "books") else {return}
         

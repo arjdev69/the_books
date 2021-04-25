@@ -16,6 +16,12 @@ class BooksRepository: NSObject {
         }
     }
     
+    func editBookService(id:String, _ books:Dictionary<String, Any>, completion:@escaping(_ add:Bool, _ data:Any) -> Void){
+        BooksApi().editBookService(id:id, books) { (add, data) in
+            completion(add, data)
+        }
+    }
+    
     func getAllBooksService(completion:@escaping(_ data:Any) -> Void){
         BooksApi().getAllBooksService { (data) in
             completion(data)

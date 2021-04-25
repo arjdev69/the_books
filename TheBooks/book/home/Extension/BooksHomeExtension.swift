@@ -15,7 +15,7 @@ extension HomeBookViewController: UICollectionViewDataSource, UICollectionViewDe
         self.SearchBarView.layer.cornerRadius = 15
         self.SearchField.setImage(UIImage(named: "searchImg"), for: .search, state: .normal)
         self.BoxBtn.layer.cornerRadius = 45
-        self.addPlusBook.layer.cornerRadius = 35
+        self.addPlusBook.layer.cornerRadius = self.addPlusBook.bounds.width/2
         collectionBooks.dataSource = self
         collectionBooks.delegate = self
     }
