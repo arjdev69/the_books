@@ -25,6 +25,10 @@ class HomeBookViewController: UIViewController, UISearchBarDelegate {
     
     var books:Array<BooksHome> = []
     
+    var reading:Array<BooksHome> = []
+    var done:Array<BooksHome> = []
+    var forRead:Array<BooksHome> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
